@@ -10,7 +10,9 @@ export default defineConfig({
       transformIndexHtml: {
         order: 'post',
         handler: (html) =>
-          html.replace(/ type="module" crossorigin/g, ' defer').replace(/ crossorigin/g, ''),
+          html
+            .replace(/ type="module" crossorigin/g, ' defer')
+            .replace(/ crossorigin(?= href="\.\/assets\/)/g, ''),
       },
     },
   ],
