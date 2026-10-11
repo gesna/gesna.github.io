@@ -1,5 +1,4 @@
 import { projects } from "../data/projects";
-import { useRevealOnMount } from "../hooks/useRevealOnMount";
 import * as section from "../styles/section.css";
 import * as styles from "./Projects.css";
 
@@ -12,15 +11,8 @@ const placeholderColors: (keyof typeof styles.placeholder)[] = [
 ];
 
 export default function Projects() {
-  const sectionRef = useRevealOnMount<HTMLElement>();
-
   return (
-    <section
-      id="projects"
-      ref={sectionRef}
-      tabIndex={-1}
-      className={section.section}
-    >
+    <section id="projects" className={section.section}>
       <h2 className={section.heading}>Things I've built</h2>
       <p className={section.intro}>
         A few projects I'm proud of, and what I learned along the way.

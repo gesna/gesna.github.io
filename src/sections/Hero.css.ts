@@ -3,6 +3,10 @@ import { vars } from '../styles/theme.css'
 
 export const hero = style({
   display: 'grid',
+  // Fill the whole screen so the next section starts below the fold,
+  // with the Hero's content vertically centered.
+  minHeight: '100svh',
+  alignContent: 'center',
   gap: vars.space.md,
   maxWidth: vars.maxWidth,
   margin: '0 auto',

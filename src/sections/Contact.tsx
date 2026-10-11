@@ -1,4 +1,3 @@
-import { useRevealOnMount } from "../hooks/useRevealOnMount";
 import * as section from "../styles/section.css";
 import * as styles from "./Contact.css";
 
@@ -27,15 +26,8 @@ const links: ContactLink[] = [
 ];
 
 export default function Contact() {
-  const sectionRef = useRevealOnMount<HTMLElement>();
-
   return (
-    <section
-      id="contact"
-      ref={sectionRef}
-      tabIndex={-1}
-      className={section.section}
-    >
+    <section id="contact" className={section.section}>
       <h2 className={section.heading}>Let's talk</h2>
       <p className={section.intro}>
         Have an idea, a question, or just want to say hi? Reach out on any of

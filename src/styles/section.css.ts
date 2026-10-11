@@ -6,8 +6,6 @@ export const section = style({
   maxWidth: vars.maxWidth,
   margin: '0 auto',
   padding: `${vars.space.lg} ${vars.space.md} ${vars.space.xl}`,
-  // Revealed sections receive focus; they aren't controls, so no outline.
-  outline: 'none',
 })
 
 export const heading = style({

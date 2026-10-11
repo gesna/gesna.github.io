@@ -1,11 +1,6 @@
 import * as styles from "./Hero.css";
 
-type HeroProps = {
-  onSeeWork: () => void;
-  onGetInTouch: () => void;
-};
-
-export default function Hero({ onSeeWork, onGetInTouch }: HeroProps) {
+export default function Hero() {
   return (
     <section className={styles.hero}>
       <p className={styles.greeting}>Hi, I'm</p>
@@ -15,14 +10,10 @@ export default function Hero({ onSeeWork, onGetInTouch }: HeroProps) {
         difference in people's lives.
       </p>
       <div className={styles.actions}>
-        <a
-          className={`${styles.button} ${styles.primary}`}
-          href="#projects"
-          onClick={onSeeWork}
-        >
+        <a className={`${styles.button} ${styles.primary}`} href="#projects">
           See my work
         </a>
-        <a className={styles.button} href="#contact" onClick={onGetInTouch}>
+        <a className={styles.button} href="#contact">
           Get in touch
         </a>
       </div>
