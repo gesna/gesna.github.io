@@ -6,6 +6,15 @@ globalStyle('*, *::before, *::after', {
   boxSizing: 'border-box',
 })
 
+globalStyle('html', {
+  scrollBehavior: 'smooth',
+  '@media': {
+    '(prefers-reduced-motion: reduce)': {
+      scrollBehavior: 'auto',
+    },
+  },
+})
+
 globalStyle('body', {
   margin: 0,
   background: vars.color.bg,
