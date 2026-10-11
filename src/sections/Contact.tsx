@@ -3,7 +3,6 @@ import * as styles from "./Contact.css";
 
 type ContactLink = {
   label: string;
-  value: string;
   href: string;
   color: keyof typeof styles.card;
 };
@@ -11,19 +10,16 @@ type ContactLink = {
 const links: ContactLink[] = [
   {
     label: "Email",
-    value: "gesna@live.com",
     href: "mailto:gesna@live.com",
     color: "yellow",
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/gesna-aggarwal",
     href: "https://www.linkedin.com/in/gesna-aggarwal",
     color: "blue",
   },
   {
     label: "GitHub",
-    value: "github.com/gesna",
     href: "https://github.com/gesna",
     color: "mint",
   },
@@ -64,7 +60,6 @@ export default function Contact() {
               })}
             >
               <span className={styles.label}>{link.label}</span>
-              <span className={styles.value}>{link.value}</span>
             </a>
           </li>
         ))}
