@@ -1,24 +1,6 @@
 import { style, styleVariants } from '@vanilla-extract/css'
 import { vars } from '../styles/theme.css'
 
-export const contact = style({
-  maxWidth: vars.maxWidth,
-  margin: '0 auto',
-  padding: `${vars.space.lg} ${vars.space.md} ${vars.space.xl}`,
-  // The section receives focus when revealed; it isn't a control, so no outline.
-  outline: 'none',
-})
-
-export const heading = style({
-  fontSize: 'clamp(2.5rem, 7vw, 4.5rem)',
-})
-
-export const intro = style({
-  maxWidth: '40ch',
-  marginTop: vars.space.sm,
-  fontSize: '1.25rem',
-})
-
 export const list = style({
   display: 'grid',
   // As many columns as fit at 240px+ each: 3 on desktop, 1 on phones.
@@ -67,10 +49,4 @@ export const label = style({
   fontFamily: vars.font.display,
   fontSize: '1.5rem',
   fontWeight: 800,
-})
-
-export const value = style({
-  display: 'block',
-  marginTop: vars.space.xs,
-  overflowWrap: 'anywhere',
 })

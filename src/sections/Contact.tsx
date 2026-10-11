@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useRevealOnMount } from "../hooks/useRevealOnMount";
+import * as section from "../styles/section.css";
 import * as styles from "./Contact.css";
 
 type ContactLink = {
@@ -26,24 +27,17 @@ const links: ContactLink[] = [
 ];
 
 export default function Contact() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  // Contact only appears once revealed, so bring it into view right away
-  // and move keyboard focus to it for screen reader and keyboard users.
-  useEffect(() => {
-    sectionRef.current?.focus({ preventScroll: true });
-    sectionRef.current?.scrollIntoView();
-  }, []);
+  const sectionRef = useRevealOnMount<HTMLElement>();
 
   return (
     <section
       id="contact"
       ref={sectionRef}
       tabIndex={-1}
-      className={styles.contact}
+      className={section.section}
     >
-      <h2 className={styles.heading}>Let's talk</h2>
-      <p className={styles.intro}>
+      <h2 className={section.heading}>Let's talk</h2>
+      <p className={section.intro}>
         Have an idea, a question, or just want to say hi? Reach out on any of
         these.
       </p>
