@@ -14,6 +14,7 @@ export const vars = createGlobalTheme(':root', {
   font: {
     display: "'Bricolage Grotesque', system-ui, sans-serif",
     body: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    mono: "ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
   },
   space: {
     xs: '0.5rem',
