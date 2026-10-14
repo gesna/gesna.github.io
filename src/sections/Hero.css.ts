@@ -31,7 +31,8 @@ export const name = style({
   justifySelf: 'start',
   // Scales with the screen: 3rem on phones, up to 8rem on wide screens.
   fontSize: 'clamp(3rem, 12vw, 8rem)',
-  textShadow: `5px 5px 0 ${vars.color.pink}`,
+  // Offset in em, so the pink layer stays proportional to the name at every screen size.
+  textShadow: `0.04em 0.04em 0 ${vars.color.pink}`,
 })
 
 export const tagline = style({
