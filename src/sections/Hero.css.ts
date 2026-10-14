@@ -41,13 +41,26 @@ export const tagline = style({
 })
 
 export const actions = style({
-  position: 'relative',
   display: 'flex',
   flexWrap: 'wrap',
   gap: vars.space.sm,
+  '@media': {
+    // On phones, always stack the buttons, with room between them for "start here!".
+    'screen and (max-width: 480px)': {
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      rowGap: '3.5rem',
+    },
+  },
 })
 
-// A handwritten "start here!" scribbled below the buttons...
+// Wraps "See my work" so the note and arrow below stay attached to it, wherever it sits.
+export const startWrap = style({
+  position: 'relative',
+  display: 'flex',
+})
+
+// A handwritten "start here!" scribbled below "See my work"...
 export const startNote = style({
   position: 'absolute',
   top: 'calc(100% + 1.2rem)',

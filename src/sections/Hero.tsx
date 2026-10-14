@@ -40,16 +40,18 @@ export default function Hero() {
         />
       </p>
       <div className={styles.actions}>
-        <a className={`${styles.button} ${styles.primary}`} href="#projects">
-          See my work
-        </a>
+        <span className={styles.startWrap}>
+          <a className={`${styles.button} ${styles.primary}`} href="#projects">
+            See my work
+          </a>
+          <Doodle name="arrowLoop" size={56} seed={7} className={styles.startArrow} />
+          <p className={`${scrapbook.pencilNote} ${styles.startNote}`} aria-hidden="true">
+            start here!
+          </p>
+        </span>
         <a className={styles.button} href="#contact">
           Get in touch
         </a>
-        <Doodle name="arrowLoop" size={56} seed={7} className={styles.startArrow} />
-        <p className={`${scrapbook.pencilNote} ${styles.startNote}`} aria-hidden="true">
-          start here!
-        </p>
       </div>
     </section>
   );
