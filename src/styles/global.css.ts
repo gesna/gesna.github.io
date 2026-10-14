@@ -1,4 +1,5 @@
 import { globalStyle } from '@vanilla-extract/css'
+import { arrowCursor } from './cursors'
 import { vars } from './theme.css'
 
 // Base styles shared by every page.
@@ -7,6 +8,8 @@ globalStyle('*, *::before, *::after', {
 })
 
 globalStyle('html', {
+  // The site's own navy arrow cursor, used everywhere (links too, below).
+  cursor: arrowCursor,
   scrollBehavior: 'smooth',
   '@media': {
     '(prefers-reduced-motion: reduce)': {
@@ -41,6 +44,8 @@ globalStyle('p', {
 
 globalStyle('a', {
   color: 'inherit',
+  // Browsers switch links to a hand by default; keep the site's own arrow instead.
+  cursor: 'inherit',
 })
 
 globalStyle('img', {
