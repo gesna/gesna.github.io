@@ -10,11 +10,14 @@ export const vars = createGlobalTheme(':root', {
     blue: '#3a86ff',
     yellow: '#ffd23f',
     mint: '#2ec4b6',
+    // Translucent yellow masking tape for the scrapbook polaroids.
+    tape: 'rgba(255, 210, 63, 0.7)',
   },
   font: {
     display: "'Bricolage Grotesque', system-ui, sans-serif",
     body: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
     mono: "ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
+    hand: "'Caveat', 'Comic Sans MS', cursive",
   },
   space: {
     xs: '0.5rem',
@@ -27,4 +30,8 @@ export const vars = createGlobalTheme(':root', {
   shadow: '6px 6px 0 #1b1135',
   radius: '16px',
   maxWidth: '1100px',
+  // Pencil gray for doodles and handwritten notes.
+  // (New tokens go at the end: vanilla-extract names variables by position, so inserting
+  // or removing one earlier renames the rest and confuses a running dev server.)
+  graphite: '#4a4852',
 })

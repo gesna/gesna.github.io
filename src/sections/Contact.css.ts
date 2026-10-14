@@ -12,6 +12,7 @@ export const list = style({
 })
 
 const cardBase = style({
+  position: 'relative',
   display: 'block',
   height: '100%',
   padding: vars.space.md,
@@ -42,6 +43,18 @@ export const card = styleVariants({
   yellow: [cardBase, { background: vars.color.yellow }],
   blue: [cardBase, { background: vars.color.blue }],
   mint: [cardBase, { background: vars.color.mint }],
+})
+
+// Where the tape sits: across the top edge, a little left of center.
+export const tape = style({
+  top: '-10px',
+  left: '22%',
+})
+
+export const star = style({
+  display: 'inline-block',
+  marginLeft: '0.15em',
+  verticalAlign: 'top',
 })
 
 export const label = style({

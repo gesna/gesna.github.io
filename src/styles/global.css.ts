@@ -18,6 +18,9 @@ globalStyle('html', {
 globalStyle('body', {
   margin: 0,
   background: vars.color.bg,
+  // Faint halftone dots, like a printed zine page.
+  backgroundImage: `radial-gradient(color-mix(in srgb, ${vars.color.text} 10%, transparent) 1px, transparent 1.4px)`,
+  backgroundSize: '18px 18px',
   color: vars.color.text,
   fontFamily: vars.font.body,
   fontSize: '1.125rem',
