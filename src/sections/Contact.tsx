@@ -1,5 +1,5 @@
 import Doodle from "../components/Doodle";
-import * as scrapbook from "../styles/scrapbook.css";
+import Tape, { type TapeColor } from "../components/Tape";
 import * as section from "../styles/section.css";
 import { vars } from "../styles/theme.css";
 import * as styles from "./Contact.css";
@@ -9,7 +9,7 @@ type ContactLink = {
   href: string;
   color: keyof typeof styles.card;
   // Picked to stand out against the card color.
-  tape: keyof typeof scrapbook.tapeColor;
+  tape: TapeColor;
 };
 
 const links: ContactLink[] = [
@@ -64,8 +64,9 @@ export default function Contact() {
                 rel: "noreferrer",
               })}
             >
-              <span
-                className={`${scrapbook.tape} ${scrapbook.tapeColor[link.tape]} ${styles.tape}`}
+              <Tape
+                color={link.tape}
+                className={styles.tape}
                 style={{ rotate: `${tapeTilts[index % tapeTilts.length]}deg` }}
               />
               <span className={styles.label}>{link.label}</span>

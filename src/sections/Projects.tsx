@@ -1,13 +1,13 @@
 import type { CSSProperties } from "react";
 import Doodle, { type DoodleName } from "../components/Doodle";
+import Tape, { type TapeColor } from "../components/Tape";
 import { projects } from "../data/projects";
-import * as scrapbook from "../styles/scrapbook.css";
 import * as section from "../styles/section.css";
 import { vars } from "../styles/theme.css";
 import * as styles from "./Projects.css";
 
 // Tape colors cycle across the polaroids.
-const tapeColors: (keyof typeof scrapbook.tapeColor)[] = ["yellow", "pink", "mint"];
+const tapeColors: TapeColor[] = ["yellow", "pink", "mint"];
 
 // Placeholder photo colors cycle through these for projects without an image.
 const placeholderColors: (keyof typeof styles.photoPlaceholder)[] = [
@@ -83,8 +83,9 @@ export default function Projects() {
               className={styles.polaroid}
               style={{ rotate: `${polaroidTilts[index % polaroidTilts.length]}deg` }}
             >
-              <div
-                className={`${scrapbook.tape} ${scrapbook.tapeColor[tapeColors[index % tapeColors.length]]} ${styles.tape}`}
+              <Tape
+                color={tapeColors[index % tapeColors.length]}
+                className={styles.tape}
               />
               {project.image ? (
                 <img
