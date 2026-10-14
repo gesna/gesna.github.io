@@ -129,6 +129,14 @@ export const button = style({
     '(prefers-reduced-motion: reduce)': {
       transition: 'none',
     },
+    // A smaller version on phones, in proportion with the rest of the page.
+    'screen and (max-width: 480px)': {
+      padding: '0.6rem 1.1rem',
+      fontSize: '1rem',
+      borderWidth: '2px',
+      borderRadius: '12px',
+      boxShadow: `4px 4px 0 ${vars.color.text}`,
+    },
   },
 })
 
